@@ -409,6 +409,7 @@
 				2D62518C1B0EBA1900753AD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D62518D1B0EBA1900753AD7 /* Build configuration list for PBXNativeTarget "DegreesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				2D62518F1B0EBA1900753AD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
