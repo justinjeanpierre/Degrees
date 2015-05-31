@@ -17,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rla-NA-oJk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rla-NA-oJk">
                                 <rect key="frame" x="16" y="28" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQj-R4-T8C">
-                                <rect key="frame" x="16" y="66" width="568" height="20.5"/>
+                                <rect key="frame" x="16" y="66" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,12 +33,18 @@
                                 <state key="normal" title="convert to Fahrenheit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressToFahrenheitButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VZn-fW-Pau"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mh-of-KsB">
                                 <rect key="frame" x="304" y="94" width="280" height="30"/>
                                 <state key="normal" title="convert to Celsius">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressToCelsiusButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sf7-vQ-m59"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -57,6 +63,10 @@
                             <constraint firstItem="4Mh-of-KsB" firstAttribute="top" secondItem="aQj-R4-T8C" secondAttribute="bottom" constant="7.5" id="yYp-CQ-M7t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="rla-NA-oJk" id="ppD-dX-Uhz"/>
+                        <outlet property="outputLabel" destination="aQj-R4-T8C" id="oue-vc-WAm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
