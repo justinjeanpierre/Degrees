@@ -10,27 +10,25 @@ import UIKit
 import XCTest
 
 class DegreesTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
+	func testCelsiusToFahrenheit() {
+		let degreesC = 70.0
+		let degreesF = ViewController().celsiusToFahrenheit(degreesC)
+		let expectedF = 158.0
+		
+		println("in: \(degreesC) out: \(degreesF)")
+		
+		XCTAssertEqual(degreesF, expectedF, "")
+	}
+	
+	func testFahrenheitToCelsius() {
+		let degreesF = 86.0
+		let degreesC = ViewController().fahrenheitToCelsius(degreesF)
+		let expectedC = 30.0
+		
+		println("in: \(degreesF) out: \(degreesC)")
+		
+		XCTAssertEqual(degreesC, expectedC, "")
+	}
+	
 }
