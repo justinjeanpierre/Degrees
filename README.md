@@ -2,4 +2,4 @@
 
 A simple Celsius -> Fahrenheit and Fahrenheit -> Celsius conversion app for iOS.
 
-This is the sample project for my [writing storm article](https://github.com/justinjeanpierre/writing-storm-1).
+This is the sample project for my article about [automated testing with Xcode](http://bit.ly/xctest).
